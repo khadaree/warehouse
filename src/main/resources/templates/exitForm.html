@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- Responsive -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,
+                 initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/style.css" />
+    <!-- Title -->
+    <title>PWA Tutorial</title>
+
+    <!-- Meta Tags required for
+       Progressive Web App -->
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+    <meta name="theme-color" content="black">
+
+    <!-- Manifest File link -->
+    <link rel="manifest" href="manifest.json">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src='js/exitForm.js'></script>
+</head>
+
+<body onload="getRegisterList()">
+	<main>
+      <nav>
+        <h1>Warehouse</h1>
+        <ul>
+            <li><a href="./homePage" style="text-decoration:none">Home</a></li>
+            <li>About</li>
+            <li>Blog</li>
+        </ul>
+      </nav>
+      <div><h4 th:text="${message}"></h4></div>
+      <div class="wms-container" id="container">     
+        Loading...
+	  </div>
+      <div class="container" id="exitFormDtls" style="display: none;">
+		<form action="./saveExitRegister" method="POST" id="exitFormDtlsForm">
+            <div style="padding-top: 20px;">                                                        
+                <div style="text-align: left;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="width: 25%;"></td>
+                            <td style="width: 50%;">
+                                <div style="padding-bottom: 2px;font-weight: bold;">Register id</div>
+                                <div style="padding-bottom: 10px;"><input type="text" name="registerId" hidden="true" style="width:200px;height: 25px;"/></div>
+                                <div style="padding-bottom: 2px;font-weight: bold;">Truck number</div>
+                                <div style="padding-bottom: 10px;"><input type="text" name="truckNo" style="width:200px;height: 25px;"/></div>
+                                <div style="padding-bottom: 2px;font-weight: bold;">Way bill number</div>
+                                <div style="padding-bottom: 10px;"><input type="text" name="wayBillNo" style="width:200px;height: 25px;"/></div>
+                                <div style="padding-bottom: 2px;font-weight: bold;">Miller name</div>
+                                <div style="padding-bottom: 10px;"><input type="text" name="millerName" style="width:200px;height: 25px;"/></div>
+                                <div style="padding-bottom: 2px;font-weight: bold;">Miller place</div>
+                                <div style="padding-bottom: 10px;"><input type="text" name="millerPlace" style="width:200px;height: 25px;"/></div>
+                                <div style="padding-bottom: 2px;font-weight: bold;">Veriety</div>
+                                <div style="padding-bottom: 10px;"><input type="text" name="veriety" style="width:200px;height: 25px;"/></div>
+                                <div style="padding-bottom: 2px;font-weight: bold;">Bags</div>
+                                <div style="padding-bottom: 10px;"><input type="text" name="bags" style="width:200px;height: 25px;"/></div>                                
+                                <div style="padding-bottom: 2px;font-weight: bold;">In-time</div>
+                                <div style="padding-bottom: 15px;"><input type="text" name="inTime" style="width:200px;height: 25px;"/></div>                                
+                                <div style="padding-bottom: 10px;text-align: center;padding-right: 25px;"><a class="card--link" href="#" onclick="saveExitForm()">Exit</a></div>                            
+                            </td>
+                            <td style="width: 25%;"></td>
+                        </tr>
+                    </table>                    
+                </div>
+            </div>
+        </form>
+	  </div>
+	  
+    </main>
+
+
+    <script>
+    // Script for Service Worker
+    </script>
+</body>
+
+</html>
