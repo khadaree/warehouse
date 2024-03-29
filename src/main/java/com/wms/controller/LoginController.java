@@ -16,8 +16,8 @@ import com.wms.manager.NextGenKeyHandler;
 import com.wms.manager.RegisterManagerImpl;
 import com.wms.persister.entity.Register;
 import com.wms.persister.entity.User;
-import com.wms.util.StringHelper;
 
+//testing git commit
 import jakarta.servlet.http.HttpSession;
 
 //import jakarta.servlet.http.HttpSession;
